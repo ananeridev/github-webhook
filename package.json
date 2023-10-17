@@ -1,0 +1,29 @@
+{
+  "name": "github-webhook",
+  "version": "1.0.0",
+  "description": "app to listen to github webhooks",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ananeridev/github-webhook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ananeridev/github-webhook/issues"
+  },
+  "homepage": "https://github.com/ananeridev/github-webhook#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "octokit": "^3.1.1"
+  },
+  "devDependencies": {
+    "smee-client": "^1.2.3"
+  }
+}
