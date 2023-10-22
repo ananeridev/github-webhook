@@ -1,4 +1,3 @@
-// recebo o evento porem rertorna errro 404, nao adiciona mudanca no PR
 import dotenv from "dotenv";
 import {App} from "octokit";
 import {createNodeMiddleware} from "@octokit/webhooks";
@@ -21,7 +20,7 @@ const app = new App({
   },
 });
 
-const messageForNewPRs = "Thanks for opening a new PR! Please follow our contributing guidelines to make your PR easier to review.";
+const messageForNewPRs = "Valeu por criar essa PR! Siga os guidelines para essa PR entrar em review";
 
 async function handlePullRequestOpened({octokit, payload}) {
   console.log(`Received a pull request event for #${payload.pull_request.number}`);
@@ -67,3 +66,5 @@ http.createServer(middleware).listen(port, () => {
   console.log(`Server is listening for events at: ${localWebhookUrl}`);
   console.log('Press Ctrl + C to quit.')
 });
+
+export { handlePullRequestOpened };
